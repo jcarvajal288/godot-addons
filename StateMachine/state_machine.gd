@@ -8,7 +8,7 @@ var current_state: State
 
 signal signal_state_change
 
-func init(subject: Character) -> void:
+func init(subject: CharacterBody2D) -> void:
 	for child in get_children():
 		child.subject = subject
 		child.director = director

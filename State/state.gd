@@ -8,11 +8,11 @@ enum AnimationType {
 }
 
 @export var animation_name: String
-@export var animation_type: AnimationType
+@export var animation_type: AnimationType = AnimationType.REGULAR
 var animation_player: AnimationPlayer
 
 var director: Director
-var subject: Character
+var subject: CharacterBody2D
 var signal_state_change
 
 

@@ -27,7 +27,7 @@ func change_state(new_state: State) -> void:
 	current_state.enter()
 
 
-func process_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if not current_state:
 		return
 	var new_state = current_state.process_input(event)
@@ -35,7 +35,7 @@ func process_input(event: InputEvent) -> void:
 		change_state(new_state)
 
 
-func process_physics(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if not current_state:
 		return
 	var new_state = current_state.process_physics(delta)
@@ -43,7 +43,7 @@ func process_physics(delta: float) -> void:
 		change_state(new_state)
 
 
-func process_frame(delta: float) -> void:
+func _process(delta: float) -> void:
 	if not current_state:
 		return
 	var new_state = current_state.process_frame(delta)

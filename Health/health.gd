@@ -22,3 +22,7 @@ func take_damage(damage: float) -> void:
 
 func _on_hit(damage: float) -> void:
 	take_damage(damage)
+
+
+func is_dead() -> bool:
+	return current_health <= 0
